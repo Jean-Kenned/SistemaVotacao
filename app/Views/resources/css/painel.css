@@ -1,0 +1,43 @@
+.card-dimensions{
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  margin: auto;
+}
+.info-color {
+  background-color :#CAEBFA  !important;
+
+}
+.buttonSubmit {
+  width: 10;
+}
+.labelFont {
+  font-size: 14px;
+  font-weight: bold;
+}
+.titlefont {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+.welcomeFont {
+  font-size: 14px;
+  width: 50% !important;
+  font-weight: bold;
+}
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.buttonSairStyle {
+  width: 80px  !important;
+
+}
+.container {
+  padding: 2rem 0rem;
+}
+
+h4 {
+  margin: 2rem 0rem 1rem;
+}
