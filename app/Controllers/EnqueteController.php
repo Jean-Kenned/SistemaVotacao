@@ -5,7 +5,6 @@ require __DIR__."/../Views/ViewManager.php";
 
 class EnqueteController {
     public function index(){
-        echo "enter here";
         $enquetes = EnqueteModel::selectAll();
         $viewmanager = new ViewManager('home.php');
         $viewmanager->render($enquetes);

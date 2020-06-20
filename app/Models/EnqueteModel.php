@@ -1,7 +1,7 @@
 <?php
 
 require 'DB.php';
-require __DIR__.'/../Classes/Enquete.php';
+require __DIR__.'/../Enquete.php';
 
 class EnqueteModel {
   public static function selectAll() {
@@ -41,12 +41,11 @@ class EnqueteModel {
         if ($connection->query($sql) === TRUE) {
           echo "Cadastro realizado com sucesso.";
           return true;
-        } else {
-          echo "Error: " . $sql . "<br>" . $connection->error;
-          return false;
-        }
+        } 
+        echo "Error: " . $sql . "<br>" . $connection->error;
+        return false;
+        
     }
-
       echo "Erro ao cadastrar!".$connection->error;
       return false;
   }
@@ -58,10 +57,10 @@ class EnqueteModel {
       if ($connection->query($sql) === TRUE) {
         echo "Enquete deletada com sucesso.";
         return true;
-      } else {
-        echo "Erro ao deletar!".$connection->error;
-        return false;
       }
+      echo "Erro ao deletar!".$connection->error;
+      return false;
+      
     }
 
 
@@ -86,22 +85,19 @@ class EnqueteModel {
               if ($connection->query($sql) === TRUE) {
                    echo "Cadastro realizado com sucesso.";
                    return true;
-              } else {
-                   echo "Error: " . $sql . "<br>" . $connection->error;
-                   return false;
               }
+               echo "Error: " . $sql . "<br>" . $connection->error;
+               return false;
+              
 
-          } else {
-            echo "Erro ao deletar!".$connection->error;
-            return false;
-          }
-           
-        }else{
-            echo "Erro ao atualizar";
-            //echo mysqli_errno($connection);
-            print_r($connection->error);
-            return false;
+          } 
+          echo "Erro ao deletar!".$connection->error;
+          return false;
         }
+        echo "Erro ao atualizar";
+        print_r($connection->error);
+        return false;
+        
     }
 }
 
