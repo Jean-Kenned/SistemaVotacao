@@ -31,7 +31,15 @@
               </tr>
             </thead>
             <tbody>
-        
+            <?php
+              foreach ($enquetes as $enquete) {
+                ?>
+                <tr>
+                  <th scope="row"><?php echo $enquete->getTitulo() ?></th>
+                  <td><?php echo $enquete->getDataInicio() ?> </td>
+                  <td><?php echo $enquete->getDataTermino() ?></td>
+                </tr>
+              <?php } ?>
             </tbody>
           </table>
         </div>

@@ -7,7 +7,8 @@ class EnqueteController {
     public function index(){
         $enquetes = EnqueteModel::selectAll();
         $viewmanager = new ViewManager('home.php');
-        $viewmanager->render($enquetes);
+        $viewmanager->assign('enquetes', $enquetes);
+        echo $viewmanager->render($enquetes);
     }
 
     public function store(){
