@@ -1,6 +1,6 @@
 <?php
 
-// define('APP_PATH', dirname(__FILE__));
+define('APP_PATH', dirname(__FILE__));
 define('MYSQL_HOST', 'localhost');
 define('MYSQL_USER', 'root');
 define('MYSQL_PASS', '12345');

@@ -1,8 +1,9 @@
 <?php
 
 include __DIR__.'/../init.php';
-include __DIR__.'/../app/Controllers/EnqueteController.php';
+include __DIR__.'/../app/Controllers/ControllerManager.php';
 
-$enqueteController = new EnqueteController();
-$enqueteController->index();
+$request = $_SERVER['REQUEST_URI'];
+ControllerManager::execute($request);
+
 

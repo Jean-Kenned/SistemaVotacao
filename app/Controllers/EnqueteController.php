@@ -8,8 +8,14 @@ class EnqueteController {
         $enquetes = EnqueteModel::selectAll();
         $viewmanager = new ViewManager('home.php');
         $viewmanager->assign('enquetes', $enquetes);
-        echo $viewmanager->render($enquetes);
+        echo $viewmanager->render();
     }
+
+    public function create(){
+        $viewmanager = new ViewManager('create.php');
+        echo $viewmanager->render();
+    }
+ 
 
     public function store(){
         $titulo = $_POST['titulo'];
