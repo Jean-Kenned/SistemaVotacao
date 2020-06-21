@@ -14,9 +14,9 @@
 </head>
 
 <script>
-function changeView(view) {
-  window.location.href = view
-}
+  function changeView(view) {
+    window.location.href = view
+  }
 </script>
 
 <body class="bg-light">
@@ -36,9 +36,9 @@ function changeView(view) {
               </tr>
             </thead>
             <tbody>
-            <?php
+              <?php
               foreach ($enquetes as $enquete) {
-                ?>
+              ?>
                 <tr>
                   <th scope="row"><?php echo $enquete->getTitulo() ?></th>
                   <td><?php echo $enquete->getDataInicio() ?> </td>
@@ -49,7 +49,7 @@ function changeView(view) {
           </table>
         </div>
       </div>
-        <button type="button" onClick="changeView('create')" class="btn btn-primary">Adicionar Enquete</button>
+      <button type="button" onClick="changeView('create')" class="btn btn-primary">Adicionar Enquete</button>
     </div>
 
   </div>
