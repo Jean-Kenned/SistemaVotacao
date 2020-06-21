@@ -39,7 +39,6 @@ class EnqueteModel {
         $sql = substr($sql, 0, -1);
         $sql = $sql.";";
         if ($connection->query($sql) === TRUE) {
-          echo "Cadastro realizado com sucesso.";
           return true;
         } 
         echo "Error: " . $sql . "<br>" . $connection->error;
@@ -55,7 +54,6 @@ class EnqueteModel {
       $connection = $DB->getConnection();
       $sql = "DELETE FROM Enquetes WHERE id = $id";
       if ($connection->query($sql) === TRUE) {
-        echo "Enquete deletada com sucesso.";
         return true;
       }
       echo "Erro ao deletar!".$connection->error;
@@ -71,7 +69,6 @@ class EnqueteModel {
         if ($connection->query($sql) === TRUE){
           $sql = "DELETE FROM Opcoes WHERE id_enquete = $id";
           if ($connection->query($sql) === TRUE) {
-              echo "Opções deletadas com sucesso.";
               $sql = "INSERT INTO Opcoes (nome, numeroVotos, id_enquete) VALUES ";
               $values = "";
               foreach($opcoes as $opcao){
@@ -83,7 +80,6 @@ class EnqueteModel {
               $sql = substr($sql, 0, -1);
               $sql = $sql.";";
               if ($connection->query($sql) === TRUE) {
-                   echo "Cadastro realizado com sucesso.";
                    return true;
               }
                echo "Error: " . $sql . "<br>" . $connection->error;
